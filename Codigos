@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+	int opcao, quantidade_animal;
+		
+    float res=0, quantidade_ani, custo, leao, zebra, elefante, arara, girafa, quantidade_mes, custo_mes;
+	leao= 5;
+	zebra= 3;
+	elefante= 20;
+	arara= 0.3;
+	girafa= 6;
+	
+	printf("\n[1] - Leao");
+	printf("\n[2] - Zebra");
+	printf("\n[3] - Elefante");	
+	printf("\n[4] - Arara");
+	printf("\n[5] - Girafa");
+	printf("\n\n\ Opcao: ");
+	scanf("%d", &opcao);
+	
+	printf(" Quantos animais: ");
+	scanf("%d", &quantidade_animal);
+	
+	printf(" Custo estimado do kilo por comida: ");
+	scanf("%d", &custo);
+	
+	
+	if (opcao==1)	
+	{
+		res = leao * quantidade_animal;
+		quantidade_ani = leao;
+		quantidade_mes = res*30 ;
+		custo_mes = res * quantidade_mes;
+	}
+	
+	if (opcao==2)
+	{
+		res = zebra * quantidade_animal;
+		quantidade_ani = zebra;
+		quantidade_mes = res*30 ;
+		custo_mes = res * quantidade_mes;
+	}
+	
+	if (opcao==3)
+	{
+		res = elefante * quantidade_animal;
+		quantidade_ani = elefante;
+		quantidade_mes = res*30 ;
+		custo_mes = res * quantidade_mes;
+	}
+	
+	if (opcao==4)
+	{
+		res = arara * quantidade_animal;
+		quantidade_ani = arara;
+		quantidade_mes = res*30 ;
+		custo_mes = custo * 30;
+	}
+	
+	if (opcao==5)
+	{
+		res = girafa * quantidade_animal;
+		quantidade_ani = girafa;
+		quantidade_mes = res*30 ;
+		custo_mes = res * quantidade_mes;
+	}
+
+	printf("\n A quantidade de kilo por animal: %0.2f", quantidade_ani);
+	printf("\n Quantidade por dia: %0.2f", res);
+	printf("\n A quantidade de kilo por mes: %0.1f", quantidade_mes);
+	printf("\n Custo estimado por mes: %0.1f", custo_mes);
+	return 0;
+}
